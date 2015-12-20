@@ -33,7 +33,7 @@ STRICT_ALIASING := true
 CLANG_O3 := true
 ENABLE_GCCONLY := true
 GRAPHITE_OPTS := true
-USE_PIPE := false
+USE_PIPE := true
 
 ENABLE_CPUSETS := true
 
