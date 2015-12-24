@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2015 The VRToxin Project
 # Copyright (C) 2015 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,11 +30,17 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a7
 
 TARGET_GCC_VERSION_ARM64 := 4.9-kernel
+
+# Optimizations
 STRICT_ALIASING := true
 CLANG_O3 := true
 ENABLE_GCCONLY := true
 GRAPHITE_OPTS := true
 USE_PIPE := true
+
+# System
+export USE_CCACHE := 1
+export USE_SYSTEM_CCACHE := 1
 
 ENABLE_CPUSETS := true
 
