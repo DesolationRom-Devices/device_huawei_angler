@@ -32,11 +32,11 @@ TARGET_2ND_CPU_VARIANT := cortex-a7
 TARGET_GCC_VERSION_ARM64 := 4.9-kernel
 
 # Optimizations
-STRICT_ALIASING := true
+STRICT_ALIASING := false
 CLANG_O3 := true
 ENABLE_GCCONLY := true
-GRAPHITE_OPTS := true
-USE_PIPE := true
+GRAPHITE_OPTS := false
+USE_PIPE := false
 
 # System
 export USE_CCACHE := 1
