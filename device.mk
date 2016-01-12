@@ -221,7 +221,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560
+    ro.sf.lcd_density=500
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
@@ -231,7 +231,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.data_con_rprt=true
+    persist.radio.data_con_rprt=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.force_eri_from_xml=true
 
 # Enable low power video mode for 4K encode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -256,7 +259,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=10 \
     telephony.lteOnCdmaDevice=1 \
-    persist.radio.mode_pref_nv10=1
+    persist.radio.mode_pref_nv10=1 \
+    ro.telephony.get_imsi_from_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
