@@ -40,10 +40,6 @@ ENABLE_GCCONLY := true
 GRAPHITE_OPTS := false
 USE_PIPE := true
 
-# System
-export USE_CCACHE := 1
-export USE_SYSTEM_CCACHE := 1
-
 ENABLE_CPUSETS := true
 
 BOARD_KERNEL_BASE        := 0x00000000
