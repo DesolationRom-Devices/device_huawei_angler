@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository": "f100cleveland/saberCore64",
+    "target_path": "kernel/huawei/angler",
+    "branch": "saberCore"
+  },
+  {
+   "remote": "github",
+    "repository": "TheMuppets/proprietary_vendor_huawei",
+    "target_path": "vendor/huawei",
+    "branch": "cm-13.0"
+  }
+]
