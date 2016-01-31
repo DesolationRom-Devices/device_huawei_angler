@@ -30,8 +30,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a7
 
 # Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.0-kernel-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+TARGET_GCC_VERSION_ARM64 := 6.0-kernel-uber
 
 # Optimizations
 STRICT_ALIASING := false
