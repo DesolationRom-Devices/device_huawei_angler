@@ -19,7 +19,6 @@
 #
 # Everything in this directory will become public
 
-
 PRODUCT_COPY_FILES += \
     device/huawei/angler/init.angler.rc:root/init.angler.rc \
     device/huawei/angler/init.angler.sensorhub.rc:root/init.angler.sensorhub.rc \
@@ -52,17 +51,13 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
     device/huawei/angler/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     device/huawei/angler/audio_policy.conf:system/etc/audio_policy.conf \
-    device/huawei/angler/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/huawei/angler/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 # Input device files
 PRODUCT_COPY_FILES += \
     device/huawei/angler/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/huawei/angler/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
     device/huawei/angler/synaptics_dsx.idc:system/usr/idc/synaptics_dsx.idc
-
-# for launcher layout
-#PRODUCT_PACKAGES += \
-#    AnglerLayout
 
 # Delegation for OEM customization
 PRODUCT_OEM_PROPERTIES := \
@@ -116,7 +111,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
-
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
@@ -247,7 +241,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # for perfd
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.min_freq_0=384000
+    ro.min_freq_0=384000 \
     ro.min_freq_4=384000
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -278,7 +272,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp
+    ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp
 
 # For SPN display
 PRODUCT_COPY_FILES += \
@@ -344,11 +338,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
-   fs_config_files
+    fs_config_files
 
 # For data
 PRODUCT_PACKAGES += \
-   librmnetctl
+    librmnetctl
 
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -387,16 +381,16 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk
 
 # drmservice prop
 PRODUCT_PROPERTY_OVERRIDES += \
-drm.service.enabled=true
+    drm.service.enabled=true
 
 # facelock properties
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.facelock.black_timeout=400 \
-ro.facelock.det_timeout=1500 \
-ro.facelock.rec_timeout=2500 \
-ro.facelock.lively_timeout=2500 \
-ro.facelock.est_max_time=600 \
-ro.facelock.use_intro_anim=false
+    ro.facelock.black_timeout=400 \
+    ro.facelock.det_timeout=1500 \
+    ro.facelock.rec_timeout=2500 \
+    ro.facelock.lively_timeout=2500 \
+    ro.facelock.est_max_time=600 \
+    ro.facelock.use_intro_anim=false
 
 $(call inherit-product-if-exists, hardware/qcom/msm8994/msm8994.mk)
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8994/msm8994-gpu-vendor.mk)
