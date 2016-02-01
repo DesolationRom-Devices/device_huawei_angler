@@ -378,10 +378,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.oem_unlock_supported=1
 
 # configure the HWUI memory limits
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # setup dalvik vm configs.
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 
 # drmservice prop
 PRODUCT_PROPERTY_OVERRIDES += \
