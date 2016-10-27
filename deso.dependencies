@@ -1,0 +1,14 @@
+[
+  {
+    "remote":      "deso-devices",  
+    "repository":  "vendor_huawei",
+    "target_path": "vendor/huawei",
+    "branch":      "n"
+  },
+  {
+    "remote":      "github",
+    "repository":  "USA-RedDragon/Werewolf-angler",
+    "target_path": "kernel/huawei/angler",
+    "branch":      "n"
+  }
+]
