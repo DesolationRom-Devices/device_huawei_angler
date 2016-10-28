@@ -9,6 +9,6 @@
     "remote":      "github",
     "repository":  "USA-RedDragon/Werewolf-angler",
     "target_path": "kernel/huawei/angler",
-    "branch":      "n"
+    "branch":      "cm-14.0"
   }
 ]
