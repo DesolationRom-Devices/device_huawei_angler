@@ -3,12 +3,12 @@
     "remote":      "deso-devices",  
     "repository":  "vendor_huawei",
     "target_path": "vendor/huawei",
-    "branch":      "n"
+    "branch":      "cm-14.0"
   },
   {
     "remote":      "github",
     "repository":  "USA-RedDragon/Werewolf-angler",
     "target_path": "kernel/huawei/angler",
-    "branch":      "cm-14.0"
+    "branch":      "n"
   }
 ]
