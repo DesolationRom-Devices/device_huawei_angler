@@ -279,21 +279,8 @@ service ssr_setup /system/bin/ssr_setup
     oneshot
     disabled
 
-service ss_ramdump /system/bin/subsystem_ramdump
-    class main
-    user system
-    group system
-    disabled
-
 on property:persist.sys.ssr.restart_level=*
     start ssr_setup
-
-on property:persist.sys.ssr.enable_ramdumps=1
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
-    start ss_ramdump
-
-on property:persist.sys.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
 service charger /sbin/healthd -c
     class charger
@@ -374,14 +361,6 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     group gps inet net_raw net_admin wifi
     writepid /dev/cpuset/system-background/tasks
-
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 # start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
@@ -504,12 +483,3 @@ service ppd /system/bin/mm-pp-daemon
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
-
-service diag_test_server /vendor/bin/diag_test_server
-    class core
-    user root
-    disabled
-
-on property:ro.boot.mode=hw-factory
-    start diag_test_server
-
