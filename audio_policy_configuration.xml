@@ -37,12 +37,6 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
-                <mixPort name="deep_buffer" role="source"
-                        flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"
-                             channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </mixPort>
                 <mixPort name="compressed_offload" role="source"
                          flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD|AUDIO_OUTPUT_FLAG_NON_BLOCKING">
                     <profile name="" format="AUDIO_FORMAT_MP3"
@@ -110,21 +104,21 @@
             </devicePorts>
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,raw,deep_buffer"/>
+                       sources="primary output,raw"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,raw,deep_buffer,compressed_offload"/>
+                       sources="primary output,raw,compressed_offload"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary output,raw,deep_buffer,compressed_offload"/>
+                       sources="primary output,raw,compressed_offload"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,raw,deep_buffer,compressed_offload"/>
+                       sources="primary output,raw,compressed_offload"/>
                 <route type="mix" sink="Line Out"
-                       sources="primary output,raw,deep_buffer,compressed_offload"/>
+                       sources="primary output,raw,compressed_offload"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,raw,deep_buffer"/>
+                       sources="primary output,raw"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,raw,deep_buffer"/>
+                       sources="primary output,raw"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,raw,deep_buffer"/>
+                       sources="primary output,raw"/>
                 <route type="mix" sink="Telephony Tx"
                        sources="voice_tx"/>
                 <route type="mix" sink="primary input"
